@@ -1,0 +1,16 @@
+post:
+  summary: Create API Key
+  description: Create an API key for the client
+  responses:
+    '200':
+      description: Successful API key creation
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/ApiSettingsResponse.yaml'
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/ErrorResponse.yaml'

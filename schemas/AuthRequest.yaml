@@ -1,0 +1,15 @@
+type: object
+required:
+  - client
+  - email
+  - password
+properties:
+  client:
+    type: string
+    example: "client_bb1d600f-f174-49dc-a34f-a79c77e237c8"
+  email:
+    type: string
+    example: "zparekh@getsafepay.com"
+  password:
+    type: string
+    example: "azazazazaz"

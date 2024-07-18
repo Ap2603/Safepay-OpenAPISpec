@@ -1,0 +1,22 @@
+post:
+  summary: Create JWT Token
+  description: Authenticate the company and create a JWT token
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/AuthRequest.yaml'
+  responses:
+    '200':
+      description: Successful authentication
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/AuthResponse.yaml'
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/ErrorResponse.yaml'

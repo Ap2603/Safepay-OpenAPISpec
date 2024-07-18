@@ -1,0 +1,22 @@
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      session:
+        type: string
+        example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      token:
+        type: string
+        example: "client_071f9c25-c291-4dcf-a21e-79b576ddd0fd"
+  status:
+    type: object
+    properties:
+      errors:
+        type: array
+        items:
+          type: string
+        example: []
+      message:
+        type: string
+        example: "success"

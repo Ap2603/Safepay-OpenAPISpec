@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: SafePay API
+  description: API for SafePay services
+  version: 1.0.0
+servers:
+  - url: https://dev.api.getsafepay.com
+    description: SafePay Dev API Server
+paths:
+  /auth/v1/company/authenticate:
+    $ref: './paths/authenticate.yaml'
+  /user/v1/guest/:
+    $ref: './paths/guest.yaml'
+  /client/api-settings/v1/:
+    $ref: './paths/apiSettings.yaml'
+  /client/passport/v1/token:
+    $ref: './paths/timeBasedToken.yaml'
+components:
+  schemas:
+    AuthRequest:
+      $ref: './schemas/AuthRequest.yaml'
+    AuthResponse:
+      $ref: './schemas/AuthResponse.yaml'
+    ErrorResponse:
+      $ref: './schemas/ErrorResponse.yaml'
+    GuestRequest:
+      $ref: './schemas/GuestRequest.yaml'
+    GuestResponse:
+      $ref: './schemas/GuestResponse.yaml'
+    ApiSettingsResponse:
+      $ref: './schemas/ApiSettingsResponse.yaml'
+    TimeBasedTokenResponse:
+      $ref: './schemas/TimeBasedTokenResponse.yaml'
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-SFPY-MERCHANT-SECRET
+security:
+  - ApiKeyAuth: []

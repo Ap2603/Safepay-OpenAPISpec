@@ -1,0 +1,18 @@
+post:
+  summary: Generate Time-Based Token
+  description: Generate a time-based token using the merchant secret key
+  security:
+    - ApiKeyAuth: []
+  responses:
+    '200':
+      description: Successful token generation
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/TimeBasedTokenResponse.yaml'
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/ErrorResponse.yaml'

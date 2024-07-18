@@ -1,0 +1,22 @@
+post:
+  summary: Create Guest JWT
+  description: Create a guest JWT token
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/GuestRequest.yaml'
+  responses:
+    '200':
+      description: Successful authentication
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/GuestResponse.yaml'
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/ErrorResponse.yaml'
