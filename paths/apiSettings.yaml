@@ -1,16 +1,20 @@
 post:
   summary: Create API Key
-  description: Create an API key for the client
+  operationId: clientApiSettingsV1Post
   responses:
     '200':
-      description: Successful API key creation
+      description: Successful creation of API key
       content:
         application/json:
           schema:
             $ref: '../schemas/ApiSettingsResponse.yaml'
     '400':
-      description: Bad request
+      description: Bad Request
       content:
         application/json:
           schema:
             $ref: '../schemas/ErrorResponse.yaml'
+  tags:
+    - API Settings
+  security:
+    - BearerAuth: []

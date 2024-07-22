@@ -32,9 +32,11 @@ components:
     TimeBasedTokenResponse:
       $ref: './schemas/TimeBasedTokenResponse.yaml'
   securitySchemes:
-    ApiKeyAuth:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    MerchantSecretAuth:
       type: apiKey
       in: header
       name: X-SFPY-MERCHANT-SECRET
-security:
-  - ApiKeyAuth: []

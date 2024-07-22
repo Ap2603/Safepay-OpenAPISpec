@@ -1,18 +1,20 @@
 post:
   summary: Generate Time-Based Token
-  description: Generate a time-based token using the merchant secret key
-  security:
-    - ApiKeyAuth: []
+  operationId: clientPassportV1TokenPost
   responses:
     '200':
-      description: Successful token generation
+      description: Successful generation of time-based token
       content:
         application/json:
           schema:
             $ref: '../schemas/TimeBasedTokenResponse.yaml'
     '400':
-      description: Bad request
+      description: Bad Request
       content:
         application/json:
           schema:
             $ref: '../schemas/ErrorResponse.yaml'
+  tags:
+    - Passport
+  security:
+    - MerchantSecretAuth: []
