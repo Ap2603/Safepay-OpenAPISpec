@@ -1,26 +1,22 @@
 post:
-  summary: Create Guest JWT
-  description: Create a guest JWT token
+  summary: Create JWT Token
+  operationId: createJWT
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '../schemas/GuestRequest.yaml'
+          $ref: '../schemas/CreateJWTRequest.yaml'
   responses:
     '200':
-      description: Successful authentication
+      description: Successful response
       content:
         application/json:
           schema:
-            $ref: '../schemas/GuestResponse.yaml'
+            $ref: '../schemas/CreateJWTResponse.yaml'
     '400':
-      description: Bad request
+      description: Bad Request
       content:
         application/json:
           schema:
             $ref: '../schemas/ErrorResponse.yaml'
-            
-tags:
-    - Guest
-

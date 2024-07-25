@@ -5,10 +5,8 @@ properties:
     properties:
       session:
         type: string
-        example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
       token:
         type: string
-        example: "guest_4ca55e56-45e6-46df-8d64-68ca86867be5"
   status:
     type: object
     properties:
@@ -16,7 +14,5 @@ properties:
         type: array
         items:
           type: string
-        example: []
       message:
         type: string
-        example: "success"

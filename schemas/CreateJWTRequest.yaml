@@ -1,0 +1,12 @@
+type: object
+properties:
+  client:
+    type: string
+  email:
+    type: string
+  password:
+    type: string
+required:
+  - client
+  - email
+  - password

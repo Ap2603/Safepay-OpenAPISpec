@@ -1,42 +1,40 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
-  title: SafePay API
-  description: API for SafePay services
+  title: Safepay API
   version: 1.0.0
 servers:
   - url: https://dev.api.getsafepay.com
-    description: SafePay Dev API Server
 paths:
   /auth/v1/company/authenticate:
-    $ref: './paths/authenticate.yaml'
+    $ref: './paths/createJWT.yaml'
   /user/v1/guest/:
-    $ref: './paths/guest.yaml'
+    $ref: './paths/createGuest.yaml'
   /client/api-settings/v1/:
-    $ref: './paths/apiSettings.yaml'
+    $ref: './paths/createAPIKey.yaml'
   /client/passport/v1/token:
-    $ref: './paths/timeBasedToken.yaml'
+    $ref: './paths/generateTimeBasedToken.yaml'
 components:
   schemas:
-    AuthRequest:
-      $ref: './schemas/AuthRequest.yaml'
-    AuthResponse:
-      $ref: './schemas/AuthResponse.yaml'
+    CreateJWTRequest:
+      $ref: './schemas/CreateJWTRequest.yaml'
+    CreateJWTResponse:
+      $ref: './schemas/CreateJWTResponse.yaml'
+    CreateGuestRequest:
+      $ref: './schemas/CreateGuestRequest.yaml'
+    CreateGuestResponse:
+      $ref: './schemas/CreateGuestResponse.yaml'
+    CreateAPIKeyResponse:
+      $ref: './schemas/CreateAPIKeyResponse.yaml'
+    GenerateTimeBasedTokenResponse:
+      $ref: './schemas/GenerateTimeBasedTokenResponse.yaml'
     ErrorResponse:
       $ref: './schemas/ErrorResponse.yaml'
-    GuestRequest:
-      $ref: './schemas/GuestRequest.yaml'
-    GuestResponse:
-      $ref: './schemas/GuestResponse.yaml'
-    ApiSettingsResponse:
-      $ref: './schemas/ApiSettingsResponse.yaml'
-    TimeBasedTokenResponse:
-      $ref: './schemas/TimeBasedTokenResponse.yaml'
   securitySchemes:
-    BearerAuth:
+    bearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
-    MerchantSecretAuth:
+    merchantSecret:
       type: apiKey
       in: header
       name: X-SFPY-MERCHANT-SECRET

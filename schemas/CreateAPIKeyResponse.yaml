@@ -5,21 +5,16 @@ properties:
     properties:
       token:
         type: string
-        example: "api_b3db2bd8-5fa3-4ec4-ab47-0733dacfed69"
       client_id:
         type: string
-        example: "client_071f9c25-c291-4dcf-a21e-79b576ddd0fd"
       webhook_secret:
         type: string
-        example: "c44e1b93160e1ccd34ea9c40e79f5f11ea276105b563c53d9ca59e4eb8477686"
       created_at:
         type: string
         format: date-time
-        example: "0001-01-01T00:00:00Z"
       updated_at:
         type: string
         format: date-time
-        example: "0001-01-01T00:00:00Z"
   status:
     type: object
     properties:
@@ -29,4 +24,3 @@ properties:
           type: string
       message:
         type: string
-        example: "success"

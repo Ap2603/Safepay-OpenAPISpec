@@ -1,8 +1,13 @@
 type: object
 properties:
-  errors:
-    type: array
-    items:
-      type: string
-  message:
-    type: string
+  status:
+    type: object
+    properties:
+      errors:
+        type: array
+        items:
+          type: string
+      message:
+        type: string
+  required:
+    - status
