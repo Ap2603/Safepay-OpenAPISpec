@@ -38,3 +38,6 @@ components:
       type: apiKey
       in: header
       name: X-SFPY-MERCHANT-SECRET
+security:
+  - bearerAuth: []
+  - merchantSecret: []

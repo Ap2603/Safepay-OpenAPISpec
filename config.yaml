@@ -1,0 +1,18 @@
+modelPackage: models
+apiPackage: services
+invokerPackage: internal
+groupId: com.safepay
+artifactId: safepay-go
+templateDir: D:/Extra-stuff/Safepay-OpenAPISpec/safepay-go-templates
+modelFileSuffix: ".go"
+apiFileSuffix: ".go"
+supportingFiles: 
+  templateFile: utils.mustache
+  destinationFilename: "internal/utils.go"
+files:
+  model.mustache:
+    folder: models
+    templateType: Model
+  api.mustache:
+    folder: services
+    templateType: API

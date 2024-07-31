@@ -3,5 +3,9 @@
   "spaces": 2,
   "generator-cli": {
     "version": "7.7.0"
-  }
+  },
+
+  "model.mustache": {
+    "folder": "models"
+}
 }
