@@ -1,0 +1,39 @@
+{
+    "post": {
+      "summary": "Create Guest JWT",
+      "operationId": "createGuest",
+      "description": "Register a guest user. The result is a JWT token for a guest session. This can be used to authenticate the Payments Order API.\n",
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../../schemas/CreateGuestRequest.json"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../../schemas/CreateGuestResponse.json"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../../schemas/ErrorResponse.json"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

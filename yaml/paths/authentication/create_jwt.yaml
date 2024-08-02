@@ -1,0 +1,24 @@
+post:
+  summary: Create JWT Token
+  operationId: createJWT
+  description: |
+    Use the client email and password fields to generate a JWT token. The email and password are that of the user who created the account, referred to as the Admin user.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/CreateJWTRequest.yaml'  # Note the correct relative path
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/CreateJWTResponse.yaml'  # Note the correct relative path
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/ErrorResponse.yaml'  # Note the correct relative path

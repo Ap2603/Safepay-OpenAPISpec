@@ -1,0 +1,22 @@
+post:
+  summary: Generate Time Based Token
+  operationId: generateTimeBasedToken
+  description: |
+    Use your merchant Secret key to generate a time-based token.
+    The token can be extracted from data and has an expiration of 2 minutes.
+    Use this token to authenticate against all requests that support time-based token authentication.
+  security:
+    - merchantSecret: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/GenerateTimeBasedTokenResponse.yaml'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/ErrorResponse.yaml'

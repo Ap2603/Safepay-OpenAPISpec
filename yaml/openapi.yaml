@@ -2,17 +2,24 @@ openapi: 3.0.3
 info:
   title: Safepay API
   version: 1.0.0
+  description: |
+    Safepay is a regulated payments service provider that enables developers to orchestrate money movement between customers and businesses with ease and speed.
+    The Safepay API makes it simple for businesses and financial platforms to create payment sessions, manage subscriptions, issue invoices and exchange value by sending and receiving money.
+    Our API is based upon REST principles, returns JSON responses, and uses standard HTTP response codes.
+    Safepay offers two environments to developers - production and sandbox.
+    Any transaction performed in our sandbox environment will not have any financial impact.
+    We also provide test credentials for payment instruments that can be used while integrating.
 servers:
   - url: https://dev.api.getsafepay.com
 paths:
   /auth/v1/company/authenticate:
-    $ref: './paths/createJWT.yaml'
+    $ref: './paths/authentication/create_jwt.yaml'
   /user/v1/guest/:
-    $ref: './paths/createGuest.yaml'
+    $ref: './paths/authentication/create_guest.yaml'
   /client/api-settings/v1/:
-    $ref: './paths/createAPIKey.yaml'
+    $ref: './paths/authentication/create_api_key.yaml'
   /client/passport/v1/token:
-    $ref: './paths/generateTimeBasedToken.yaml'
+    $ref: './paths/authentication/generate_timebasedtoken.yaml'
 components:
   schemas:
     CreateJWTRequest:

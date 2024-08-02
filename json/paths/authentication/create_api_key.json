@@ -1,0 +1,34 @@
+{
+    "post": {
+      "summary": "Create API Key",
+      "operationId": "createAPIKey",
+      "description": "All accounts are automatically provisioned with an API key when they are created.\nHowever, if for some reason, your account does not have an API key, you can use this endpoint to create one. \nAlternatively, you can also create an API key from your dashboard. API keys can only be created once.\nTo rotate or update your API key, please refer to the Rotate Api Key endpoint.\nRotating an API key will revoke access from any API endpoints that are configured with any previously generated API key.\nUse this endpoint only if you feel that your API key has been exposed or compromised.\n",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Successful response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../../schemas/CreateAPIKeyResponse.json"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../../schemas/ErrorResponse.json"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

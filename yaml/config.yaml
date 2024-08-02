@@ -1,0 +1,10 @@
+
+files:
+  model.mustache:
+    folder: models
+    templateType: Model
+    destinationFilename: .go
+  api.mustache:
+    folder: services
+    templateType: API
+    destinationFilename: .go
